@@ -144,4 +144,3 @@ temp_*
 
 # uv
 .venv/
-uv.lock
