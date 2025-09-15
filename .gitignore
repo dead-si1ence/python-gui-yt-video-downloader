@@ -141,3 +141,7 @@ Thumbs.db
 downloads/
 *.tmp
 temp_*
+
+# uv
+.venv/
+uv.lock

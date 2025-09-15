@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-video-downloader"
+version = "2.0.0"
+description = "A modern, user-friendly Python application for downloading YouTube videos with a beautiful GUI built using CustomTkinter."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "sshussh"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["youtube", "downloader", "gui", "tkinter", "video", "mp3", "mp4"]
+requires-python = ">=3.8"
+dependencies = [
+    "customtkinter>=5.2.0",
+    "pytube>=15.0.0",
+    "Pillow>=9.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sshussh/python-gui-yt-video-downloader"
+Repository = "https://github.com/sshussh/python-gui-yt-video-downloader"
+Issues = "https://github.com/sshussh/python-gui-yt-video-downloader/issues"
+
+[project.scripts]
+youtube-downloader = "main:main"
+
+[project.gui-scripts]
+youtube-downloader-gui = "main:main"
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.sources]

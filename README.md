@@ -32,9 +32,35 @@ A modern, user-friendly Python application for downloading YouTube videos with a
 
 ### Prerequisites
 - Python 3.8 or higher
-- pip (Python package installer)
+- pip (Python package installer) or uv (fast Python package manager)
 
-### Quick Install
+### Method 1: Using uv (Recommended - Fast & Modern)
+
+1. **Install uv (if not already installed):**
+   ```bash
+   # On macOS and Linux
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   
+   # Or using pip
+   pip install uv
+   ```
+
+2. **Clone and setup the project:**
+   ```bash
+   git clone https://github.com/sshussh/python-gui-yt-video-downloader.git
+   cd python-gui-yt-video-downloader
+   
+   # Create virtual environment and install dependencies
+   uv sync
+   ```
+
+3. **Run the application:**
+   ```bash
+   uv run python main.py
+   ```
+
+### Method 2: Using pip (Traditional)
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/sshussh/python-gui-yt-video-downloader.git
@@ -55,6 +81,12 @@ A modern, user-friendly Python application for downloading YouTube videos with a
 - `customtkinter>=5.2.0` - Modern GUI framework
 - `pytube>=15.0.0` - YouTube video download library
 - `Pillow>=9.0.0` - Image processing for thumbnails
+
+### Why uv?
+- **⚡ Lightning Fast**: 10-100x faster than pip for dependency resolution and installation
+- **🔒 Reproducible**: Generates `uv.lock` for exact dependency versions across environments
+- **🎯 Simple**: Single command (`uv sync`) sets up everything automatically
+- **🔄 Compatible**: Works alongside pip - you can use either method
 
 ## 🚀 Usage
 
@@ -115,7 +147,10 @@ A modern, user-friendly Python application for downloading YouTube videos with a
 ```
 python-gui-yt-video-downloader/
 ├── main.py              # Complete application (single file)
-├── requirements.txt     # Project dependencies
+├── requirements.txt     # Pip dependencies (legacy)
+├── pyproject.toml       # Modern Python project configuration (uv/pip)
+├── uv.lock             # Exact dependency versions (uv)
+├── .venv/              # Virtual environment (created by uv)
 ├── assets/             # UI assets
 │   └── info_icon.png   # Info button icon
 └── README.md           # This file
@@ -142,13 +177,34 @@ python-gui-yt-video-downloader/
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ### Development Setup
+
+#### Using uv (Recommended)
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Make your changes
-4. Test the application (`python main.py`)
-5. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-6. Push to the branch (`git push origin feature/AmazingFeature`)
-7. Open a Pull Request
+2. Clone your fork: `git clone https://github.com/your-username/python-gui-yt-video-downloader.git`
+3. Navigate to directory: `cd python-gui-yt-video-downloader`
+4. Install dependencies: `uv sync`
+5. Create a feature branch: `git checkout -b feature/AmazingFeature`
+6. Make your changes
+7. Test the application: `uv run python main.py`
+8. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+9. Push to the branch: `git push origin feature/AmazingFeature`
+10. Open a Pull Request
+
+#### Using pip (Traditional)
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/your-username/python-gui-yt-video-downloader.git`
+3. Navigate to directory: `cd python-gui-yt-video-downloader`
+4. Create virtual environment: `python -m venv venv`
+5. Activate virtual environment: 
+   - Windows: `venv\Scripts\activate`
+   - macOS/Linux: `source venv/bin/activate`
+6. Install dependencies: `pip install -r requirements.txt`
+7. Create a feature branch: `git checkout -b feature/AmazingFeature`
+8. Make your changes
+9. Test the application: `python main.py`
+10. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+11. Push to the branch: `git push origin feature/AmazingFeature`
+12. Open a Pull Request
 
 ## 📝 License
 

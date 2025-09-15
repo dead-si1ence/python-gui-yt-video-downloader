@@ -624,6 +624,11 @@ class App(ctk.CTk):
         self.progress_label.configure(text=progress_text)
 
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the application."""
     app = App()
     app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
