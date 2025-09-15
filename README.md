@@ -114,9 +114,8 @@ A modern, user-friendly Python application for downloading YouTube videos with a
 ### File Structure
 ```
 python-gui-yt-video-downloader/
-├── main.py              # Main application file
+├── main.py              # Complete application (single file)
 ├── requirements.txt     # Project dependencies
-├── test_app.py         # Functionality tests
 ├── assets/             # UI assets
 │   └── info_icon.png   # Info button icon
 └── README.md           # This file
@@ -138,21 +137,6 @@ python-gui-yt-video-downloader/
 - **Playlist Support**: Currently supports single videos only
 - **Live Streams**: Live or premiering videos may not be downloadable
 
-## 🧪 Testing
-
-Run the functionality tests:
-```bash
-python test_app.py
-```
-
-Tests include:
-- URL validation
-- Duration formatting
-- Number formatting
-- Filename sanitization
-- Dependency checking
-- File structure validation
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
@@ -161,7 +145,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Make your changes
-4. Run tests (`python test_app.py`)
+4. Test the application (`python main.py`)
 5. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 6. Push to the branch (`git push origin feature/AmazingFeature`)
 7. Open a Pull Request
