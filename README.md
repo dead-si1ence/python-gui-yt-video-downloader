@@ -1,4 +1,4 @@
-# YouTube Downloader (GTK)
+# YouTube Downloader
 
 A GTK4 desktop app for downloading YouTube videos and audio using yt-dlp.
 
